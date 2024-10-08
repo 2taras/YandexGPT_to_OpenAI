@@ -387,7 +387,7 @@ async def get_image(image_id: str, auth: dict = Depends(authenticate_user)):
 # Models
 @app.get("/v1/models")
 @app.get("/models")
-async def models_list(auth: dict = Depends(authenticate_user)):
+async def models_list():
     logger.info(f"* User requested models list")
     models = {
         "object": "list",
