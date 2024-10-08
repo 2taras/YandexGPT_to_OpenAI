@@ -22,7 +22,7 @@ logger = setup_logging(os.getenv('Y2O_LogFile', './logs/y2o.log'), os.getenv('Y2
 SECRETKEY = os.getenv('Y2O_SecretKey', None)
 CATALOGID = os.getenv('Y2O_CatalogID', None)
 # Is BYOK enabled (user can state their own key and catalog id in token as <CatalogID>:<SecretKey>)
-BYOK = os.getenv('Y2O_BringYourOwnKey', 'False')
+BYOK = os.getenv('Y2O_BringYourOwnKey', 'True')
 BYOK = BYOK.lower() in ['true', '1', 't', 'y', 'yes']
 
 if SECRETKEY is None or CATALOGID is None:
